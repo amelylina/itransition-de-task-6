@@ -1,0 +1,501 @@
+rank,city,region,postal_code,postal_count
+1,Berlin,Berlin,10115,182
+2,Hamburg,Hamburg,20038,100
+3,München,Bayern,80331,75
+4,Köln,Nordrhein-Westfalen,50667,45
+5,Frankfurt am Main,Hessen,60306,41
+6,Düsseldorf,Nordrhein-Westfalen,40210,37
+7,Stuttgart,Baden-Württemberg,70173,35
+8,Bremen,Bremen,28195,34
+9,Amtsgericht,Nordrhein-Westfalen,42097,33
+10,Essen,Nordrhein-Westfalen,45127,32
+11,Leipzig,Sachsen,04103,31
+12,Hannover,Niedersachsen,30159,29
+13,Dresden,Sachsen,01067,29
+14,Nürnberg,Bayern,90402,28
+15,Dortmund,Nordrhein-Westfalen,44135,27
+16,Stadtverwaltung,Nordrhein-Westfalen,45121,26
+17,Stadtverwaltung,Baden-Württemberg,70731,25
+18,Duisburg,Nordrhein-Westfalen,47051,25
+19,Wuppertal,Nordrhein-Westfalen,42103,23
+20,IKK classic,Nordrhein-Westfalen,50855,20
+21,Bielefeld,Nordrhein-Westfalen,33519,19
+22,Bochum,Nordrhein-Westfalen,44787,18
+23,Bonn,Nordrhein-Westfalen,53111,17
+24,Kiel,Schleswig-Holstein,24103,17
+25,Saarbrücken,Saarland,66111,16
+26,Braunschweig,Niedersachsen,38023,15
+27,Chemnitz,Sachsen,09111,15
+28,Magdeburg,Sachsen-Anhalt,39014,15
+29,Finanzamt,Baden-Württemberg,71029,14
+30,Amtsgericht,Hessen,61116,14
+31,Mannheim,Baden-Württemberg,68159,14
+32,Karlsruhe,Baden-Württemberg,76006,14
+33,Augsburg,Bayern,86150,14
+34,Münster,Nordrhein-Westfalen,48079,14
+35,Finanzamt,Bavaria,82317,13
+36,Wiesbaden,Hessen,65183,13
+37,Mönchengladbach,Nordrhein-Westfalen,41061,13
+38,Gelsenkirchen,Nordrhein-Westfalen,45879,13
+39,Halle,Sachsen-Anhalt,06108,13
+40,Stadtverwaltung,Hessen,61343,12
+41,Amtsgericht,Lower Saxony,26653,12
+42,Finanzamt,Nordrhein-Westfalen,45466,12
+43,Amtsgericht,Rheinland-Pfalz,54469,12
+44,Freiburg im Breisgau,Baden-Württemberg,79098,12
+45,Lübeck,Schleswig-Holstein,23539,12
+46,Erfurt,Thüringen,99084,12
+47,Kassel,Hessen,34117,11
+48,Krefeld,Nordrhein-Westfalen,47798,11
+49,Mainz,Rheinland-Pfalz,55116,11
+50,Stadtverwaltung,Bavaria,80313,10
+51,HUK-Coburg,Nordrhein-Westfalen,40202,10
+52,Cottbus,Brandenburg,03042,10
+53,Wetzlar,Hessen,35576,10
+54,Rostock,Mecklenburg-Vorpommern,18055,10
+55,Mülheim an der Ruhr,Nordrhein-Westfalen,45403,10
+56,Aachen,Nordrhein-Westfalen,52062,10
+57,Stuttgart Stuttgart-Mitte,Baden-Württemberg,70173,9
+58,Hamburg Eimsbüttel,Hamburg,20144,9
+59,Oldenburg,Niedersachsen,26121,9
+60,Osnabrück,Niedersachsen,49074,9
+61,Herne,Nordrhein-Westfalen,44623,9
+62,Potsdam,Brandenburg,14461,8
+63,Heidelberg,Baden-Württemberg,69115,8
+64,Würzburg,Bayern,97070,8
+65,Darmstadt,Hessen,64283,8
+66,Dillenburg,Hessen,35683,8
+67,Limburg an der Lahn,Hessen,65549,8
+68,Hamburg Bramfeld,Hamburg,22047,8
+69,Neuss,Nordrhein-Westfalen,41460,8
+70,Solingen,Nordrhein-Westfalen,42651,8
+71,Oberhausen,Nordrhein-Westfalen,46045,8
+72,Hagen,Nordrhein-Westfalen,58089,8
+73,Hamm,Nordrhein-Westfalen,59063,8
+74,Landratsamt,Bavaria,82317,7
+75,Amtsgericht,Bavaria,85046,7
+76,Techniker Krankenkasse,Hamburg,20901,7
+77,Commerzbank AG,Hessen,60261,7
+78,Stadtverwaltung,Rheinland-Pfalz,55409,7
+79,Finanzamt,Rheinland-Pfalz,55541,7
+80,Berlin Kreuzberg,Berlin,10961,7
+81,Pforzheim,Baden-Württemberg,75172,7
+82,Regensburg,Bayern,93047,7
+83,Bremerhaven,Bremen,27568,7
+84,Taunusstein,Hessen,65219,7
+85,Hamburg Sankt Pauli,Hamburg,20354,7
+86,Hamburg Bahrenfeld,Hamburg,22525,7
+87,Göttingen,Niedersachsen,37073,7
+88,Koblenz,Rheinland-Pfalz,56068,7
+89,Ludwigshafen am Rhein,Rheinland-Pfalz,67059,7
+90,Landratsamt,Baden-Württemberg,75363,6
+91,HUK-Coburg,Bavaria,93038,6
+92,Stadtverwaltung,Lower Saxony,26787,6
+93,BARMER,Nordrhein-Westfalen,40252,6
+94,E.ON Real Estate GmbH,Nordrhein-Westfalen,45116,6
+95,Kreisverwaltung,Nordrhein-Westfalen,52348,6
+96,Deutsche Telekom AG,Nordrhein-Westfalen,53262,6
+97,Heilbronn,Baden-Württemberg,74072,6
+98,Reutlingen,Baden-Württemberg,72760,6
+99,Ulm,Baden-Württemberg,89040,6
+100,Offenbach,Hessen,63065,6
+101,Hanau,Hessen,63405,6
+102,Witzenhausen,Hessen,37213,6
+103,Hamburg Rotherbaum,Hamburg,20144,6
+104,Hamburg Harvestehude,Hamburg,20144,6
+105,Hamburg Winterhude,Hamburg,20249,6
+106,Hamburg Tonndorf,Hamburg,22041,6
+107,Schwerin,Mecklenburg-Vorpommern,19053,6
+108,Ratingen,Nordrhein-Westfalen,40832,6
+109,Remscheid,Nordrhein-Westfalen,42853,6
+110,Leverkusen,Nordrhein-Westfalen,51371,6
+111,Trier,Rheinland-Pfalz,54290,6
+112,Kaiserslautern,Rheinland-Pfalz,67653,6
+113,Zwickau,Sachsen,08056,6
+114,Gera,Thüringen,07545,6
+115,Amtsgericht,Baden-Württemberg,73726,5
+116,UniCredit Bank AG,Bavaria,80278,5
+117,Finanzamt,Hessen,61167,5
+118,Finanzamt,Lower Saxony,26787,5
+119,Postbank eine Niederlassung der Deutsche Bank AG,Nordrhein-Westfalen,31774,5
+120,Zurich Service GmbH,Nordrhein-Westfalen,50427,5
+121,Techniker Krankenkasse,Nordrhein-Westfalen,53105,5
+122,Stuttgart Stuttgart-West,Baden-Württemberg,70176,5
+123,Stuttgart Stuttgart-Ost,Baden-Württemberg,70184,5
+124,Stuttgart Zuffenhausen,Baden-Württemberg,70435,5
+125,Ludwigsburg,Baden-Württemberg,71634,5
+126,Aalen,Baden-Württemberg,73430,5
+127,Esslingen am Neckar,Baden-Württemberg,73728,5
+128,Villingen-Schwenningen,Baden-Württemberg,78048,5
+129,Ingolstadt,Bayern,85049,5
+130,Landshut,Bayern,84028,5
+131,Fürth,Bayern,90762,5
+132,Eltville am Rhein,Hessen,65343,5
+133,Gießen,Hessen,35390,5
+134,Hamburg Stellingen,Hamburg,20255,5
+135,Hamburg Neustadt,Hamburg,20354,5
+136,Hamburg Altona-Altstadt,Hamburg,20357,5
+137,Hamburg Barmbek-Nord,Hamburg,22297,5
+138,Hamburg Hummelsbüttel,Hamburg,22339,5
+139,Hamburg Niendorf,Hamburg,22453,5
+140,Hamburg Eidelstedt,Hamburg,22457,5
+141,Hamburg Osdorf,Hamburg,22547,5
+142,Neuenkirchen,Niedersachsen,21640,5
+143,Wilhelmshaven,Niedersachsen,26382,5
+144,Celle,Niedersachsen,29221,5
+145,Hildesheim,Niedersachsen,31134,5
+146,Salzgitter,Niedersachsen,38226,5
+147,Wolfsburg,Niedersachsen,38440,5
+148,Kevelaer,Nordrhein-Westfalen,47623,5
+149,Bergisch Gladbach,Nordrhein-Westfalen,51427,5
+150,Recklinghausen,Nordrhein-Westfalen,45657,5
+151,Bottrop,Nordrhein-Westfalen,46236,5
+152,Paderborn,Nordrhein-Westfalen,33098,5
+153,Gütersloh,Nordrhein-Westfalen,33311,5
+154,Siegen,Nordrhein-Westfalen,57072,5
+155,Witten,Nordrhein-Westfalen,58452,5
+156,Lüdenscheid,Nordrhein-Westfalen,58507,5
+157,Iserlohn,Nordrhein-Westfalen,58636,5
+158,Arnsberg,Nordrhein-Westfalen,59755,5
+159,Roth,Rheinland-Pfalz,54597,5
+160,Norderstedt,Schleswig-Holstein,22844,5
+161,Flensburg,Schleswig-Holstein,24937,5
+162,Dessau,Sachsen-Anhalt,06842,5
+163,Daimler AG,Baden-Württemberg,70322,4
+164,Deutsche Post AG Direkt Marketing Center,Baden-Württemberg,70637,4
+165,AOK - Die Gesundheitskasse,Baden-Württemberg,71058,4
+166,Siemens AG,Bavaria,80200,4
+167,Deutsche Post AG NL Philatelie Versandzentrum,Bavaria,92624,4
+168,Amazon,Bavaria,90290,4
+169,AMAZON Logistik GmbH,Hessen,36242,4
+170,Commerzbank AG,Nordrhein-Westfalen,40300,4
+171,Landgericht,Nordrhein-Westfalen,42097,4
+172,Deutsche Rentenversicherung Knappschaft-Bahn-See,Nordrhein-Westfalen,45091,4
+173,"Deutsche Post AG, Abt. 1U1",Nordrhein-Westfalen,45195,4
+174,Arbeitsgericht,Nordrhein-Westfalen,45801,4
+175,Schipkau,Brandenburg,01968,4
+176,Brandenburg an der Havel,Brandenburg,14770,4
+177,Frankfurt (Oder),Brandenburg,15230,4
+178,Berlin Friedrichshain,Berlin,10243,4
+179,Stuttgart Stuttgart-Nord,Baden-Württemberg,70174,4
+180,Stuttgart Stuttgart-Süd,Baden-Württemberg,70178,4
+181,Stuttgart Bad Cannstatt,Baden-Württemberg,70191,4
+182,Stuttgart Möhringen,Baden-Württemberg,70563,4
+183,Sindelfingen,Baden-Württemberg,71063,4
+184,Konstanz,Baden-Württemberg,78462,4
+185,Tübingen,Baden-Württemberg,72070,4
+186,Hausen,Bayern,93345,4
+187,Bayreuth,Bayern,95444,4
+188,Bamberg,Bayern,96047,4
+189,Erlangen,Bayern,91052,4
+190,Schweinfurt,Bayern,97412,4
+191,Marburg,Hessen,35037,4
+192,Fulda,Hessen,36037,4
+193,Hamburg Hoheluft-Ost,Hamburg,20144,4
+194,Hamburg Alsterdorf,Hamburg,20251,4
+195,Hamburg Lokstedt,Hamburg,20253,4
+196,Hamburg Altona-Nord,Hamburg,20257,4
+197,Hamburg Bergedorf,Hamburg,21029,4
+198,Hamburg Hausbruch,Hamburg,21075,4
+199,Hamburg Wandsbek,Hamburg,22041,4
+200,Hamburg Barmbek-Süd,Hamburg,22081,4
+201,Hamburg Billstedt,Hamburg,22111,4
+202,Hamburg Rahlstedt,Hamburg,22143,4
+203,Hamburg Sasel,Hamburg,22159,4
+204,Hamburg Groß Borstel,Hamburg,22297,4
+205,Hamburg Ohlsdorf,Hamburg,22309,4
+206,Hamburg Fuhlsbüttel,Hamburg,22335,4
+207,Hamburg Poppenbüttel,Hamburg,22391,4
+208,Hamburg Othmarschen,Hamburg,22605,4
+209,Neuenkirchen,Mecklenburg-Vorpommern,17039,4
+210,Bülow,Mecklenburg-Vorpommern,17166,4
+211,Stade,Niedersachsen,21680,4
+212,Cuxhaven,Niedersachsen,27472,4
+213,Delmenhorst,Niedersachsen,27749,4
+214,Wolfenbüttel,Niedersachsen,38281,4
+215,Dormagen,Nordrhein-Westfalen,41539,4
+216,Viersen,Nordrhein-Westfalen,41747,4
+217,Velbert,Nordrhein-Westfalen,42549,4
+218,Moers,Nordrhein-Westfalen,47441,4
+219,Düren,Nordrhein-Westfalen,52349,4
+220,Castrop-Rauxel,Nordrhein-Westfalen,44575,4
+221,Minden,Nordrhein-Westfalen,32423,4
+222,Lippstadt,Nordrhein-Westfalen,59555,4
+223,Worms,Rheinland-Pfalz,67547,4
+224,Neumünster,Schleswig-Holstein,24534,4
+225,Plauen,Sachsen,08523,4
+226,Jena,Thüringen,07743,4
+227,HUK-Coburg,Baden-Württemberg,70137,3
+228,Commerzbank AG,Baden-Württemberg,70140,3
+229,Robert Bosch GmbH,Baden-Württemberg,70464,3
+230,Staatsanwaltschaft,Baden-Württemberg,73477,3
+231,BARMER,Baden-Württemberg,73520,3
+232,Techniker Krankenkasse,Baden-Württemberg,68151,3
+233,Deutsche Post AG Direkt Marketing Center,Bavaria,80217,3
+234,Deutsche Postbank AG Niederlassung München,Bavaria,80314,3
+235,Justizbehörden,Bavaria,83276,3
+236,Kreiskrankenhaus,Bavaria,83276,3
+237,Universitätsbibliothek,Bavaria,85071,3
+238,Deutsche Telekom AG Kundenniederlassung,Bavaria,94030,3
+239,AOK,Bavaria,94030,3
+240,Conrad Electronic SE,Bavaria,92240,3
+241,interServ GmbH Interscan Zustellurkunden,Bavaria,90324,3
+242,Bosch Rexroth AG,Bavaria,97419,3
+243,Deutsche Postbank AG Niederlassung Hamburg (Giro),Hamburg,22279,3
+244,Deutsche Bank AG,Hessen,60262,3
+245,DB Fernverkehr AG Bahn Card,Hessen,60643,3
+246,HUK-Coburg,Hessen,65182,3
+247,STRABAG Property and Facility Services GmbH,Hessen,65756,3
+248,Stadt,Lower Saxony,27709,3
+249,Landesamt für Besoldung und Versorgung NRW,Nordrhein-Westfalen,40192,3
+250,Bundesknappschaft,Nordrhein-Westfalen,45116,3
+251,Staatsanwaltschaft,Nordrhein-Westfalen,53222,3
+252,Sparkasse,Nordrhein-Westfalen,45801,3
+253,Verwaltungsgericht,Nordrhein-Westfalen,45801,3
+254,DAVASO GmbH,Saxony,04310,3
+255,Bundesdruckerei GmbH,Land Berlin,10917,3
+256,Kloster Lehnin,Brandenburg,14542,3
+257,Grünheide (Mark),Brandenburg,15518,3
+258,Rietz-Neuendorf,Brandenburg,15526,3
+259,Wilmersdorf,Brandenburg,16278,3
+260,Schönfeld,Brandenburg,16307,3
+261,Stuttgart Vaihingen,Baden-Württemberg,70563,3
+262,Waiblingen,Baden-Württemberg,71332,3
+263,Göppingen,Baden-Württemberg,73033,3
+264,Schwäbisch Gmünd,Baden-Württemberg,73525,3
+265,Heidenheim an der Brenz,Baden-Württemberg,89518,3
+266,Baden-Baden,Baden-Württemberg,76530,3
+267,Offenburg,Baden-Württemberg,77652,3
+268,Lörrach,Baden-Württemberg,79539,3
+269,Albstadt,Baden-Württemberg,72458,3
+270,Friedrichshafen,Baden-Württemberg,88045,3
+271,Ravensburg,Baden-Württemberg,88212,3
+272,Rosenheim,Bayern,83022,3
+273,Bergen,Bayern,83344,3
+274,Kastl,Bayern,84556,3
+275,Tiefenbach,Bayern,84184,3
+276,Passau,Bayern,94032,3
+277,Hof,Bayern,95028,3
+278,Aschaffenburg,Bayern,63739,3
+279,Holzheim,Bayern,86684,3
+280,Kempten,Bayern,87435,3
+281,Bad Homburg vor der Höhe,Hessen,61348,3
+282,Hamburg Klostertor,Hamburg,20095,3
+283,Hamburg Sankt Georg,Hamburg,20095,3
+284,Hamburg Hamburg-Altstadt,Hamburg,20099,3
+285,Hamburg Eppendorf,Hamburg,20249,3
+286,Hamburg Hoheluft-West,Hamburg,20253,3
+287,Hamburg Hamm-Nord,Hamburg,20535,3
+288,Hamburg Wilhelmsburg,Hamburg,20539,3
+289,Hamburg Lohbrügge,Hamburg,21031,3
+290,Hamburg Eißendorf,Hamburg,21073,3
+291,Hamburg Harburg,Hamburg,21073,3
+292,Hamburg Heimfeld,Hamburg,21073,3
+293,Hamburg Wilstorf,Hamburg,21073,3
+294,Hamburg Marienthal,Hamburg,22041,3
+295,Hamburg Uhlenhorst,Hamburg,22081,3
+296,Hamburg Langenhorn,Hamburg,22415,3
+297,Hamburg Schnelsen,Hamburg,22455,3
+298,Hamburg Lurup,Hamburg,22525,3
+299,Hamburg Nienstedten,Hamburg,22587,3
+300,Hamburg Groß Flottbek,Hamburg,22605,3
+301,Hamburg Ottensen,Hamburg,22763,3
+302,Neubrandenburg,Mecklenburg-Vorpommern,17033,3
+303,Lindetal,Mecklenburg-Vorpommern,17094,3
+304,Greifswald,Mecklenburg-Vorpommern,17489,3
+305,Lüssow,Mecklenburg-Vorpommern,17506,3
+306,Stralsund,Mecklenburg-Vorpommern,18435,3
+307,Wismar,Mecklenburg-Vorpommern,23966,3
+308,Seevetal,Niedersachsen,21217,3
+309,Lüneburg,Niedersachsen,21335,3
+310,Aurich,Niedersachsen,26603,3
+311,Emden,Niedersachsen,26721,3
+312,Stadland,Niedersachsen,26935,3
+313,Garbsen,Niedersachsen,30823,3
+314,Langenhagen,Niedersachsen,30851,3
+315,Peine,Niedersachsen,31224,3
+316,Hameln,Niedersachsen,31785,3
+317,Salzgitter Lebenstedt,Niedersachsen,38226,3
+318,Goslar,Niedersachsen,38640,3
+319,Nordhorn,Niedersachsen,48527,3
+320,Melle,Niedersachsen,49324,3
+321,Lingen,Niedersachsen,49808,3
+322,Meerbusch,Nordrhein-Westfalen,40667,3
+323,Hilden,Nordrhein-Westfalen,40721,3
+324,Grevenbroich,Nordrhein-Westfalen,41515,3
+325,Wesel,Nordrhein-Westfalen,46483,3
+326,Dinslaken,Nordrhein-Westfalen,46535,3
+327,Bergheim,Nordrhein-Westfalen,50126,3
+328,Kerpen,Nordrhein-Westfalen,50169,3
+329,Gummersbach,Nordrhein-Westfalen,51643,3
+330,Stolberg (Rheinland),Nordrhein-Westfalen,52222,3
+331,Troisdorf,Nordrhein-Westfalen,53840,3
+332,Marl,Nordrhein-Westfalen,45768,3
+333,Gladbeck,Nordrhein-Westfalen,45964,3
+334,Dorsten,Nordrhein-Westfalen,46282,3
+335,Bocholt,Nordrhein-Westfalen,46395,3
+336,Rheine,Nordrhein-Westfalen,48429,3
+337,Herford,Nordrhein-Westfalen,32049,3
+338,Bad Salzuflen,Nordrhein-Westfalen,32105,3
+339,Bad Oeynhausen,Nordrhein-Westfalen,32545,3
+340,Detmold,Nordrhein-Westfalen,32756,3
+341,Lünen,Nordrhein-Westfalen,44532,3
+342,Hattingen,Nordrhein-Westfalen,45525,3
+343,Menden,Nordrhein-Westfalen,58706,3
+344,Unna,Nordrhein-Westfalen,59423,3
+345,Hamm,Rheinland-Pfalz,54636,3
+346,Weiler,Rheinland-Pfalz,55413,3
+347,Schönborn,Rheinland-Pfalz,55469,3
+348,Rohrbach,Rheinland-Pfalz,55490,3
+349,Horbach,Rheinland-Pfalz,55606,3
+350,Seelbach,Rheinland-Pfalz,56377,3
+351,Neuwied,Rheinland-Pfalz,56564,3
+352,Pirmasens,Rheinland-Pfalz,66953,3
+353,Neustadt an der Weinstraße,Rheinland-Pfalz,67433,3
+354,Hohenfelde,Schleswig-Holstein,22946,3
+355,Elmshorn,Schleswig-Holstein,25335,3
+356,Neunkirchen/Saar,Saarland,66538,3
+357,Riesa,Sachsen,01587,3
+358,Doberschau-Gaußig,Sachsen,01877,3
+359,Görlitz,Sachsen,02826,3
+360,"Chemnitz, Sachsen",Sachsen,09028,3
+361,Schkopau,Sachsen-Anhalt,06179,3
+362,Sandersdorf,Sachsen-Anhalt,06780,3
+363,Harth-Pöllnitz,Thüringen,07557,3
+364,Suhl,Thüringen,98527,3
+365,Weimar,Thüringen,99423,3
+366,Landesbank Baden-Württemberg,Baden-Württemberg,70144,2
+367,Allianz Lebensversicherungs-AG,Baden-Württemberg,70151,2
+368,Statistisches Landesamt,Baden-Württemberg,70158,2
+369,EnBW Service GmbH,Baden-Württemberg,70167,2
+370,Deutsche Rentenversicherung Baden-Württemberg,Baden-Württemberg,70429,2
+371,Postbeamtenkrankenkasse,Baden-Württemberg,70467,2
+372,Karstadt AG,Baden-Württemberg,71226,2
+373,Siemens AG,Baden-Württemberg,71252,2
+374,Agentur für Arbeit Waiblingen,Baden-Württemberg,71327,2
+375,Agentur für Arbeit Ludwigsburg,Baden-Württemberg,71629,2
+376,Agentur für Arbeit Aalen,Baden-Württemberg,73425,2
+377,Agentur für Arbeit Heilbronn,Baden-Württemberg,74064,2
+378,eleven teamsports GmbH,Baden-Württemberg,74587,2
+379,EOS KSI Inkasso Deutschland GmbH,Baden-Württemberg,74903,2
+380,Agentur für Arbeit Mannheim,Baden-Württemberg,68150,2
+381,Metro Deutschland GmbH,Baden-Württemberg,68197,2
+382,Agentur für Arbeit Karlsruhe,Baden-Württemberg,76089,2
+383,Deutsche Postbank AG Niederlassung Karlsruhe,Baden-Württemberg,76118,2
+384,Baden-Württembergische Bank AG,Baden-Württemberg,76125,2
+385,Karstadt Warenhaus GmbH,Baden-Württemberg,76126,2
+386,Versorgungsanstalt des Bundes und der Länder,Baden-Württemberg,76128,2
+387,Agentur für Arbeit Konstanz,Baden-Württemberg,78454,2
+388,Agentur für Arbeit Freiburg,Baden-Württemberg,79078,2
+389,Agentur für Arbeit Lörrach,Baden-Württemberg,79533,2
+390,Agentur für Arbeit Balingen,Baden-Württemberg,72332,2
+391,Agentur für Arbeit Reutlingen,Baden-Württemberg,72757,2
+392,Agentur für Arbeit Ulm,Baden-Württemberg,89065,2
+393,DeutschlandCard GmbH,Bavaria,26060,2
+394,Kantar Deutschland GmbH,Bavaria,35508,2
+395,Serviceplan Gruppe SE & Co. KG,Bavaria,80250,2
+396,UniCredit Bank GmbH,Bavaria,80311,2
+397,Amtsgericht München,Bavaria,80315,2
+398,Versicherungskammer Bayern,Bavaria,80530,2
+399,BARMER,Bavaria,80632,2
+400,Alphabet Fuhrparkmanagement GmbH,Bavaria,80786,2
+401,Kreditorische Abrechnung,Bavaria,80787,2
+402,BMW Financial Service,Bavaria,80787,2
+403,OSRAM GmbH,Bavaria,80920,2
+404,CASHCONTROL Consulting GmbH,Bavaria,81340,2
+405,Agentur für Arbeit Weilheim i. OB,Bavaria,82360,2
+406,Agentur für Arbeit Traunstein,Bavaria,83274,2
+407,Bischöfliches Ordinariat,Bavaria,85071,2
+408,Techniker Krankenkasse,Bavaria,85821,2
+409,BNP Paribas S.A. Niederlassung Deutschland,Bavaria,90317,2
+410,Agentur für Arbeit Landshut,Bavaria,84018,2
+411,Agentur für Arbeit Passau,Bavaria,94028,2
+412,Agentur für Arbeit Schwandorf,Bavaria,92419,2
+413,Agentur für Arbeit Weiden i. d. OPf.,Bavaria,92620,2
+414,Agentur für Arbeit Regensburg,Bavaria,93012,2
+415,Deutsche Rentenversicherung Nordbayern,Bavaria,95440,2
+416,CeramTec GmbH,Bavaria,95614,2
+417,ZBI GmbH,Bavaria,26066,2
+418,Agentur für Arbeit Nürnberg,Bavaria,90300,2
+419,IKK classic,Bavaria,91124,2
+420,Agentur für Arbeit Ansbach,Bavaria,91511,2
+421,Agentur für Arbeit Aschaffenburg,Bavaria,63715,2
+422,Agentur für Arbeit Würzburg,Bavaria,97024,2
+423,Agentur für Arbeit Schweinfurt,Bavaria,97418,2
+424,Agentur für Arbeit Augsburg,Bavaria,86135,2
+425,Agentur für Arbeit Donauwörth,Bavaria,86606,2
+426,Agentur für Arbeit Kempten,Bavaria,87428,2
+427,Radio Bremen,Bremen,28100,2
+428,Agentur für Arbeit Bremen,Bremen,28189,2
+429,AdvoCard Rechtschutzversicherung Aktiengesellschaft,Hamburg,20066,2
+430,Verlagsgruppe Milchstraße,Hamburg,20242,2
+431,Körber-Stiftung,Hamburg,20446,2
+432,Greenpeace e.V.,Hamburg,20450,2
+433,Nord-Ostsee Automobile SE & Co. KG,Hamburg,21175,2
+434,DAK - Deutsche Angestellten Krankenkasse Bayern und NRW,Hamburg,22776,2
+435,DAK-Gesundheit,Hamburg,22778,2
+436,DAK-Deutsche Angestellten-Krankenkasse Hauptgeschäftsstelle,Hamburg,22788,2
+437,Sanofi-Aventis Deutschland GmbH,Hessen,10898,2
+438,Agentur für Arbeit Frankfurt am Main,Hessen,60259,2
+439,DZ Bank AG,Hessen,60265,2
+440,Commerzbank AG Dresdner Corporate Card Service,Hessen,60301,2
+441,DAK-Gesundheit,Hessen,60379,2
+442,Lufthansa Group Taste & More GmbH,Hessen,60546,2
+443,Commerzbank AG Group Banking Operations Credit,Hessen,60626,2
+444,Du Pont de Nemours (Deutschland) GmbH,Hessen,61343,2
+445,Agentur für Arbeit Offenbach,Hessen,63057,2
+446,AOK - Die Gesundheitskasse in Hessen,Hessen,63060,2
+447,Goodyear Germany GmbH,Hessen,63446,2
+448,Ärztliche Verrechnungsstelle Büdingen,Hessen,63652,2
+449,Agentur für Arbeit Darmstadt,Hessen,64272,2
+450,AOK Die Gesundheitskasse in Hessen,Hessen,64520,2
+451,Agentur für Arbeit Wiesbaden,Hessen,65166,2
+452,Barmer Ersatzkasse,Hessen,65717,2
+453,Deutsche Angestellten Krankenkasse,Hessen,65717,2
+454,Bundesamt für Wirtschaft und Ausfuhrkontrolle (BAFA),Hessen,65754,2
+455,Agentur für Arbeit Gießen,Hessen,35384,2
+456,Agentur für Arbeit Limburg an der Lahn,Hessen,65546,2
+457,Karstadt AG,Hessen,65547,2
+458,Agentur für Arbeit Korbach,Hessen,34494,2
+459,Agentur für Arbeit Lüneburg,Lower Saxony,21332,2
+460,Landgericht,Lower Saxony,21332,2
+461,Agentur für Arbeit Stade,Lower Saxony,21676,2
+462,EWE Vertrieb GmbH,Lower Saxony,26107,2
+463,BARMER,Lower Saxony,26119,2
+464,Ulla Popken Junge Mode ab Größe 42 GmbH,Lower Saxony,26177,2
+465,Unfallversicherung Bund und Bahn,Lower Saxony,26380,2
+466,Agentur für Arbeit Leer,Lower Saxony,26786,2
+467,Allgemeine Ortskrankenkasse,Lower Saxony,26869,2
+468,Agentur für Arbeit Verden,Lower Saxony,27279,2
+469,Vereinigte Informationssysteme Tierhaltung (VIT),Lower Saxony,27280,2
+470,KKH Kaufmännische Krankenkasse Hauptverwaltung,Lower Saxony,30125,2
+471,Agentur für Arbeit Hannover,Lower Saxony,30147,2
+472,Aktivbank AG Zentralregulierung,Lower Saxony,30157,2
+473,Niedersächsisches Landesamt für Soziales Jugend und Familie,Lower Saxony,31120,2
+474,Agentur für Arbeit Hameln,Lower Saxony,31780,2
+475,Agentur für Arbeit Göttingen,Lower Saxony,37070,2
+476,Deutsche Post E-POST Solutions GmbH,Lower Saxony,37568,2
+477,MDM Münzhandelsgesellschaft mbH Deutsche Münze,Lower Saxony,38097,2
+478,Agentur für Arbeit Nordhorn,Lower Saxony,48522,2
+479,Agentur für Arbeit Vechta,Lower Saxony,49374,2
+480,Deutsche Rentenversicherung Rheinland,Nordrhein-Westfalen,40187,2
+481,Deutsche Bank AG,Nordrhein-Westfalen,40189,2
+482,Daimler AG,Nordrhein-Westfalen,40467,2
+483,Bayer AG,Nordrhein-Westfalen,41538,2
+484,GEFA BANK GmbH,Nordrhein-Westfalen,42097,2
+485,Krankenversorgung der Bundesbahnbeamten,Nordrhein-Westfalen,42098,2
+486,Agentur für Arbeit Wuppertal,Nordrhein-Westfalen,42268,2
+487,VIACTIV Krankenkasse,Nordrhein-Westfalen,45064,2
+488,Agentur für Arbeit Essen,Nordrhein-Westfalen,45098,2
+489,Deutsche Postbank AG Niederlassung Essen,Nordrhein-Westfalen,45116,2
+490,Bischöfliches Generalvikariat,Nordrhein-Westfalen,45116,2
+491,Metro Deutschland GmbH,Nordrhein-Westfalen,45466,2
+492,PVS rhein-ruhr GmbH,Nordrhein-Westfalen,45466,2
+493,ThyssenKrupp Steel Europe AG,Nordrhein-Westfalen,47161,2
+494,QVC eDistribution Inc. & Co.KG,Nordrhein-Westfalen,41452,2
+495,Agentur für Arbeit Brühl,Nordrhein-Westfalen,50318,2
+496,AachenMünchener Versicherung AG,Nordrhein-Westfalen,50411,2
+497,Familienkasse Nordrhein-Westfalen-Nord,Nordrhein-Westfalen,50574,2
+498,Agentur für Arbeit Köln,Nordrhein-Westfalen,50575,2
+499,Hauptzollamt,Nordrhein-Westfalen,50664,2
+500,Deutsche Angestellten Krankenkasse,Nordrhein-Westfalen,50664,2
