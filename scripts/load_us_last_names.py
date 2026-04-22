@@ -1,4 +1,3 @@
-# load_us_last_names.py
 import json
 from pathlib import Path
 from common import RAW_DIR, copy_from_rows, truncate_locale_rows, download_file

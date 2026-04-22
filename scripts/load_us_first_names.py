@@ -1,4 +1,3 @@
-# load_us_first_names.py
 from pathlib import Path
 import requests
 from collections import defaultdict
