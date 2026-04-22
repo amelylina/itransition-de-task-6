@@ -1,5 +1,6 @@
 data/raw/
 pgdata/
+structure.txt
 
 # General
 .DS_Store
