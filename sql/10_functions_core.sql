@@ -1,14 +1,14 @@
 BEGIN;
 
 CREATE OR REPLACE FUNCTION fn_hash_uniform(
-    p_seed  BIGINT,
+    p_seed BIGINT,
     p_batch INT,
-    p_idx   INT,
+    p_idx INT,
     p_field TEXT
 ) RETURNS DOUBLE PRECISION AS $$
 DECLARE
     v_hash TEXT;
-    v_int  NUMERIC;
+    v_int NUMERIC;
 BEGIN
     v_hash := md5(p_seed::TEXT || ':' || p_batch::TEXT || ':' ||
                 p_idx::TEXT  || ':' || p_field);
@@ -21,12 +21,12 @@ END;
 $$ LANGUAGE plpgsql IMMUTABLE;
 
 CREATE OR REPLACE FUNCTION fn_hash_int(
-    p_seed  BIGINT,
+    p_seed BIGINT,
     p_batch INT,
-    p_idx   INT,
+    p_idx INT,
     p_field TEXT,
-    p_lo    BIGINT,
-    p_hi    BIGINT
+    p_lo BIGINT,
+    p_hi BIGINT
 ) RETURNS BIGINT AS $$
 DECLARE
     v_u DOUBLE PRECISION;
@@ -41,11 +41,11 @@ $$ LANGUAGE plpgsql IMMUTABLE;
 
 -- Box Muller algorithm, dont need second value
 CREATE OR REPLACE FUNCTION fn_hash_normal(
-    p_seed   BIGINT,
-    p_batch  INT,
-    p_idx    INT,
-    p_field  TEXT,
-    p_mean   DOUBLE PRECISION,
+    p_seed BIGINT,
+    p_batch INT,
+    p_idx INT,
+    p_field TEXT,
+    p_mean DOUBLE PRECISION,
     p_stddev DOUBLE PRECISION
 ) RETURNS DOUBLE PRECISION AS $$
 DECLARE
@@ -69,9 +69,9 @@ $$ LANGUAGE plpgsql IMMUTABLE;
 
 -- Lambert cylindrical sphere projection algo
 CREATE OR REPLACE FUNCTION fn_hash_sphere_point(
-    p_seed  BIGINT,
+    p_seed BIGINT,
     p_batch INT,
-    p_idx   INT,
+    p_idx INT,
     OUT lat DOUBLE PRECISION,
     OUT lon DOUBLE PRECISION
 ) AS $$
@@ -88,20 +88,20 @@ END;
 $$ LANGUAGE plpgsql IMMUTABLE;
 
 CREATE OR REPLACE FUNCTION fn_hash_weighted_pick_id(
-    p_seed    BIGINT,
-    p_batch   INT,
-    p_idx     INT,
-    p_field   TEXT,
-    p_ids     BIGINT[],
+    p_seed BIGINT,
+    p_batch INT,
+    p_idx INT,
+    p_field TEXT,
+    p_ids BIGINT[],
     p_weights INT[]
 ) RETURNS BIGINT AS $$
 DECLARE
-    v_total     BIGINT := 0;
-    v_target    DOUBLE PRECISION;
-    v_running   BIGINT := 0;
-    v_u         DOUBLE PRECISION;
-    v_len       INT;
-    i           INT;
+    v_total BIGINT := 0;
+    v_target DOUBLE PRECISION;
+    v_running BIGINT := 0;
+    v_u DOUBLE PRECISION;
+    v_len INT;
+    i INT;
 BEGIN
     v_len := COALESCE(array_length(p_ids, 1), 0);
     IF v_len = 0 THEN

@@ -1,22 +1,22 @@
 BEGIN;
 
 CREATE OR REPLACE FUNCTION fn_generate_full_name(
-    p_seed   BIGINT,
-    p_batch  INT,
-    p_idx    INT,
+    p_seed BIGINT,
+    p_batch INT,
+    p_idx INT,
     p_locale TEXT,
     p_gender TEXT
 ) RETURNS TEXT AS $$
 DECLARE
-    v_has_title  BOOLEAN;
+    v_has_title BOOLEAN;
     v_has_middle BOOLEAN;
-    v_title      TEXT;
-    v_first      TEXT;
-    v_middle     TEXT;
-    v_last       TEXT;
-    v_parts      TEXT[] := ARRAY[]::TEXT[];
+    v_title TEXT;
+    v_first TEXT;
+    v_middle TEXT;
+    v_last TEXT;
+    v_parts TEXT[] := ARRAY[]::TEXT[];
 BEGIN
-    v_has_title  := fn_hash_uniform(p_seed, p_batch, p_idx, 'name:has_title')  < 0.20;
+    v_has_title := fn_hash_uniform(p_seed, p_batch, p_idx, 'name:has_title')  < 0.20;
     v_has_middle := fn_hash_uniform(p_seed, p_batch, p_idx, 'name:has_middle') < 0.40;
 
     v_first := fn_pick_name(p_seed, p_batch, p_idx, 'name:first',
@@ -45,20 +45,20 @@ END;
 $$ LANGUAGE plpgsql STABLE;
 
 CREATE OR REPLACE FUNCTION fn_generate_address(
-    p_seed   BIGINT,
-    p_batch  INT,
-    p_idx    INT,
+    p_seed BIGINT,
+    p_batch INT,
+    p_idx INT,
     p_locale TEXT
 ) RETURNS TEXT AS $$
 DECLARE
-    v_house        BIGINT;
-    v_street_name  TEXT;
-    v_street_type  TEXT;
-    v_street_fmt   TEXT;
-    v_city         TEXT;
-    v_region       TEXT;
-    v_postal       TEXT;
-    v_street_full  TEXT;
+    v_house BIGINT;
+    v_street_name TEXT;
+    v_street_type TEXT;
+    v_street_fmt TEXT;
+    v_city TEXT;
+    v_region TEXT;
+    v_postal TEXT;
+    v_street_full TEXT;
 BEGIN
     v_house := fn_hash_int(p_seed, p_batch, p_idx, 'addr:house', 1, 9999);
     v_street_name := fn_pick_street_name(p_seed, p_batch, p_idx, 'addr:street_name', p_locale);
@@ -92,16 +92,16 @@ END;
 $$ LANGUAGE plpgsql STABLE;
 
 CREATE OR REPLACE FUNCTION fn_generate_phone(
-    p_seed   BIGINT,
-    p_batch  INT,
-    p_idx    INT,
+    p_seed BIGINT,
+    p_batch INT,
+    p_idx INT,
     p_locale TEXT
 ) RETURNS TEXT AS $$
 DECLARE
     v_pattern TEXT;
-    v_result  TEXT := '';
-    v_char    TEXT;
-    v_digit   INT;
+    v_result TEXT := '';
+    v_char TEXT;
+    v_digit INT;
     v_digit_counter INT := 0;
     i INT;
 BEGIN
@@ -110,8 +110,7 @@ BEGIN
     FOR i IN 1 .. length(v_pattern) LOOP
         v_char := substring(v_pattern FROM i FOR 1);
         IF v_char = '#' THEN
-            v_digit := fn_hash_int(p_seed, p_batch, p_idx,
-                'phone:digit_' || v_digit_counter::TEXT, 0, 9)::INT;
+            v_digit := fn_hash_int(p_seed, p_batch, p_idx, 'phone:digit_' || v_digit_counter::TEXT, 0, 9)::INT;
             v_result := v_result || v_digit::TEXT;
             v_digit_counter := v_digit_counter + 1;
         ELSE
@@ -124,22 +123,22 @@ END;
 $$ LANGUAGE plpgsql STABLE;
 
 CREATE OR REPLACE FUNCTION fn_generate_email(
-    p_seed   BIGINT,
-    p_batch  INT,
-    p_idx    INT,
+    p_seed BIGINT,
+    p_batch INT,
+    p_idx INT,
     p_locale TEXT,
     p_gender TEXT
 ) RETURNS TEXT AS $$
 DECLARE
-    v_first   TEXT;
-    v_last    TEXT;
-    v_domain  TEXT;
+    v_first TEXT;
+    v_last TEXT;
+    v_domain TEXT;
     v_pattern DOUBLE PRECISION;
-    v_suffix  INT;
-    v_local   TEXT;
+    v_suffix INT;
+    v_local TEXT;
 BEGIN
     v_first := fn_pick_name(p_seed, p_batch, p_idx, 'name:first', p_locale, 'first', p_gender);
-    v_last  := fn_pick_name(p_seed, p_batch, p_idx, 'name:last', p_locale, 'last',  'u');
+    v_last := fn_pick_name(p_seed, p_batch, p_idx, 'name:last', p_locale, 'last',  'u');
 
     v_first := replace(lower(v_first), 'ß', 'ss');
     v_first := translate(v_first, 'äöüéèêàáâñç', 'aoueeeaaanc');
@@ -167,9 +166,9 @@ END;
 $$ LANGUAGE plpgsql STABLE;
 
 CREATE OR REPLACE FUNCTION fn_generate_geolocation(
-    p_seed  BIGINT,
+    p_seed BIGINT,
     p_batch INT,
-    p_idx   INT,
+    p_idx INT,
     OUT lat DOUBLE PRECISION,
     OUT lon DOUBLE PRECISION
 ) AS $$
