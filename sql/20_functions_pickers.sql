@@ -226,8 +226,10 @@ CREATE OR REPLACE FUNCTION fn_pick_street_type(
     p_batch     INT,
     p_idx       INT,
     p_field     TEXT,
-    p_locale    TEXT
-) RETURNS TEXT AS $$
+    p_locale    TEXT,
+    OUT str_type TEXT,
+    OUT format TEXT
+)AS $$
 DECLARE
     v_ids       BIGINT[];
     v_weights   INT[];
@@ -247,7 +249,10 @@ BEGIN
     v_picked_id := fn_hash_weighted_pick_id(
         p_seed, p_batch, p_idx, p_field, v_ids, v_weights
     );
-    RETURN (SELECT value FROM street_types WHERE id = v_picked_id);
+    SELECT s.value, s.format
+    INTO str_type, format
+    FROM street_types s
+    WHERE s.id = v_picked_id;
 END;
 $$ LANGUAGE plpgsql STABLE;
 
