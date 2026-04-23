@@ -18,5 +18,5 @@ def generate_batch(locale:str, seed:int, batch:int, batch_size:int) -> list[dict
 def list_locales():
     with pg.connect(DATABASE_URL) as conn:
         with conn.cursor(row_factory=dict_row) as cur:
-            cur.execute("SELECT code, name FORM locales ORDER BY name")
+            cur.execute("SELECT code, name FROM locales ORDER BY name")
             return cur.fetchall()

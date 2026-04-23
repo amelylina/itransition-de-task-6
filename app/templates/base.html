@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SQL Faker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <style>
+        .coord { font-family: monospace; font-size: 0.85em; color: #666; }
+        table { font-size: 0.9em; }
+        th { white-space: nowrap; }
+        .user-id { color: #888; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>SQL Faker</h1>
+            <p><em>Fake user generator inside a single PostgreSQL database.</em></p>
+        </header>
+        {% block content %}{% endblock %}
+        <footer>
+            <small>Itransition Internship Task 6 by Evelina Ismagilova</small>
+        </footer>
+    </main>
+</body>
+</html>
