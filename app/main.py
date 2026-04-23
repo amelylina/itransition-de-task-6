@@ -1,23 +1,37 @@
-from fastapi import FastAPI
+from pathlib import Path
+from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
-import psycopg
-import os
+from fastapi.templating import Jinja2Templates
 
-DATABASE_URL = os.getenv(
-    "DATABASE_URL",
-    "postgresql://faker:faker@localhost:5432/sqlfaker"
-)
+from app.database import generate_batch, list_locales
 
-app = FastAPI()
+app = FastAPI(title="SQL Faker")
+
+TEMPLATES_DIR = Path(__file__).resolve().parent / "templates"
+templates = Jinja2Templates(directory=TEMPLATES_DIR)
 
 @app.get("/", response_class=HTMLResponse)
-def index():
-    with psycopg.connect(DATABASE_URL) as conn:
-        with conn.cursor() as cur:
-            cur.execute("SELECT version(), now()")
-            version, now = cur.fetchone()
-    return f"""
-    <h1>SQL Faker — plumbing check</h1>
-    <p><strong>Postgres version:</strong> {version}</p>
-    <p><strong>Server time:</strong> {now}</p>
-    """
+def index(
+    request: Request,
+    locale: str | None = None,
+    seed: int | None = None,
+    batch: int = 0,
+    batch_size: int = 10
+):
+    locales = list_locales()
+    users = None
+    if locale and seed is not None:
+        users = generate_batch(locale,seed,batch,batch_size)
+    return templates.TemplateResponse(
+        request,
+        "index.html",
+        {
+            "request": request,
+            "locales": locales,
+            "selected_locale": locale,
+            "seed": seed,
+            "batch": batch,
+            "batch_size": batch_size,
+            "users": users,
+        },
+    )

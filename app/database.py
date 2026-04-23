@@ -3,8 +3,6 @@ import psycopg as pg
 from psycopg.rows import dict_row
 from dotenv import load_dotenv
 
-from app.main import DATABASE_URL
-
 load_dotenv()
 DATABASE_URL = os.environ["DATABASE_URL"]
 
