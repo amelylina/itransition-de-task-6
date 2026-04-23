@@ -1,4 +1,5 @@
 BEGIN;
+
 CREATE OR REPLACE FUNCTION fn_hash_uniform(
     p_seed  BIGINT,
     p_batch INT,
@@ -83,6 +84,51 @@ BEGIN
 
     lon := 360.0 * v_u - 180.0;
     lat := DEGREES(ASIN(2.0 * v_v - 1.0));
+END;
+$$ LANGUAGE plpgsql IMMUTABLE;
+
+CREATE OR REPLACE FUNCTION fn_hash_weighted_pick_id(
+    p_seed    BIGINT,
+    p_batch   INT,
+    p_idx     INT,
+    p_field   TEXT,
+    p_ids     BIGINT[],
+    p_weights INT[]
+) RETURNS BIGINT AS $$
+DECLARE
+    v_total     BIGINT := 0;
+    v_target    DOUBLE PRECISION;
+    v_running   BIGINT := 0;
+    v_u         DOUBLE PRECISION;
+    v_len       INT;
+    i           INT;
+BEGIN
+    v_len := COALESCE(array_length(p_ids, 1), 0);
+    IF v_len = 0 THEN
+        RAISE EXCEPTION 'fn_hash_weighted_pick_id: empty candidate list';
+    END IF;
+    IF v_len <> COALESCE(array_length(p_weights, 1), 0) THEN
+        RAISE EXCEPTION 'fn_hash_weighted_pick_id: ids/weights length mismatch';
+    END IF;
+
+    FOR i IN 1 .. v_len LOOP
+        IF p_weights[i] <= 0 THEN
+            RAISE EXCEPTION 'fn_hash_weighted_pick_id: non-positive weight at position %', i;
+        END IF;
+        v_total := v_total + p_weights[i];
+    END LOOP;
+
+    v_u := fn_hash_uniform(p_seed, p_batch, p_idx, p_field);
+    v_target := v_u * v_total;
+
+    FOR i IN 1 .. v_len LOOP
+        v_running := v_running + p_weights[i];
+        IF v_running > v_target THEN
+            RETURN p_ids[i];
+        END IF;
+    END LOOP;
+
+    RETURN p_ids[v_len];
 END;
 $$ LANGUAGE plpgsql IMMUTABLE;
 
