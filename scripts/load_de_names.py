@@ -1,5 +1,5 @@
 import csv
-from common import PROJECT_ROOT, copy_from_rows, truncate_locale_rows
+from scripts.common import PROJECT_ROOT, copy_from_rows, truncate_locale_rows
 
 SEED_DIR = PROJECT_ROOT / "data" / "seed"
 FIRST_NAMES_FILE = SEED_DIR / "de_firstnames.csv"

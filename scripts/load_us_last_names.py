@@ -1,6 +1,5 @@
 import json
-from pathlib import Path
-from common import RAW_DIR, copy_from_rows, truncate_locale_rows, download_file
+from scripts.common import RAW_DIR, copy_from_rows, truncate_locale_rows, download_file
 
 CENSUS_URL = "https://api.census.gov/data/2010/surname?get=NAME,COUNT&RANK&RANK=1:2000"
 

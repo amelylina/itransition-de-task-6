@@ -1,8 +1,7 @@
 from pathlib import Path
-import requests
 from collections import defaultdict
 
-from common import RAW_DIR, copy_from_rows, truncate_locale_rows, download_file
+from scripts.common import RAW_DIR, copy_from_rows, truncate_locale_rows, download_file
 
 SSA_URL = "https://raw.githubusercontent.com/hackerb9/ssa-baby-names/refs/heads/main/raw-data/yob2020.txt"
 TOP_N_PER_GENDER = 1000
