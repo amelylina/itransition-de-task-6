@@ -1,5 +1,6 @@
 BEGIN;
 
+-- can be called manually when inserting new data and it will rebuild the cache table
 CREATE OR REPLACE FUNCTION fn_rebuild_picker_cache()
 RETURNS VOID AS $$
 BEGIN

@@ -1,5 +1,10 @@
 BEGIN;
 
+TRUNCATE TABLE
+    titles, street_types, email_domains, eye_colors,
+    hair_colors, phone_formats
+RESTART IDENTITY;
+
 INSERT INTO titles (locale, value, gender, freq_weight) VALUES
     ('en_US', 'Mr.',   'm', 50),
     ('en_US', 'Mrs.',  'f', 30),
@@ -34,14 +39,10 @@ INSERT INTO email_domains (locale, domain, freq_weight) VALUES
     (NULL, 'outlook.com', 15),
     (NULL, 'hotmail.com', 10),
     (NULL, 'icloud.com',  10),
-    (NULL, 'proton.me',    3);
-
-INSERT INTO email_domains (locale, domain, freq_weight) VALUES
+    (NULL, 'proton.me',    3),
     ('en_US', 'aol.com',       5),
     ('en_US', 'comcast.net',   3),
-    ('en_US', 'verizon.net',   2);
-
-INSERT INTO email_domains (locale, domain, freq_weight) VALUES
+    ('en_US', 'verizon.net',   2),
     ('de_DE', 'gmx.de',       20),
     ('de_DE', 'web.de',       15),
     ('de_DE', 't-online.de',  10),

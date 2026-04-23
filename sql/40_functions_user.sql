@@ -1,5 +1,6 @@
 BEGIN;
 
+DROP TYPE IF EXISTS user_row CASCADE;
 CREATE TYPE user_row AS (
 	locale text,
 	seed int8,

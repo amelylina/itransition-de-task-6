@@ -12,15 +12,23 @@ CREATE OR REPLACE FUNCTION fn_pick_name(
 DECLARE
     v_ids BIGINT[];
     v_weights INT[];
+    v_ids_u BIGINT[];
+    v_weights_u INT[];
     v_picked_id BIGINT;
 BEGIN
-    SELECT array_agg(id ORDER BY id),
-        array_agg(freq_weight ORDER BY id)
-    INTO v_ids, v_weights
-    FROM names
-    WHERE locale = p_locale
-        AND name_type = p_name_type
-        AND (gender = p_gender OR gender = 'u');
+    SELECT ids, weights INTO v_ids, v_weights
+    FROM picker_cache
+    WHERE cache_key = 'names:' || p_locale || ':' || p_name_type || ':' || p_gender;
+    IF p_gender IN ('m', 'f') THEN
+        SELECT ids, weights INTO v_ids_u, v_weights_u
+        FROM picker_cache
+        WHERE cache_key = 'names:' || p_locale || ':' || p_name_type || ':u';
+
+        IF v_ids_u IS NOT NULL THEN
+            v_ids := COALESCE(v_ids, ARRAY[]::BIGINT[]) || v_ids_u;
+            v_weights := COALESCE(v_weights, ARRAY[]::INT[]) || v_weights_u;
+        END IF;
+    END IF;
 
     IF v_ids IS NULL THEN
         RAISE EXCEPTION 'fn_pick_name: no names for locale=%, name_type=%, gender=%', p_locale, p_name_type, p_gender;
@@ -46,11 +54,8 @@ DECLARE
     v_weights INT[];
     v_picked_id BIGINT;
 BEGIN
-    SELECT array_agg(id ORDER BY id),
-        array_agg(freq_weight ORDER BY id)
-    INTO v_ids, v_weights
-    FROM cities
-    WHERE locale = p_locale;
+    SELECT ids, weights INTO v_ids, v_weights
+    FROM picker_cache WHERE cache_key = 'cities:' || p_locale;
 
     IF v_ids IS NULL THEN
         RAISE EXCEPTION 'fn_pick_city: no cities for locale=%', p_locale;
@@ -75,14 +80,22 @@ CREATE OR REPLACE FUNCTION fn_pick_title(
 DECLARE
     v_ids BIGINT[];
     v_weights INT[];
+    v_ids_u BIGINT[];
+    v_weights_u INT[];
     v_picked_id BIGINT;
 BEGIN
-    SELECT array_agg(id ORDER BY id),
-        array_agg(freq_weight ORDER BY id)
-    INTO v_ids, v_weights
-    FROM titles
-    WHERE locale = p_locale
-        AND (gender = p_gender OR gender = 'u');
+    SELECT ids, weights INTO v_ids, v_weights
+    FROM picker_cache WHERE cache_key = 'titles:' || p_locale || ':' || p_gender;
+
+    IF p_gender IN ('m', 'f') THEN
+        SELECT ids, weights INTO v_ids_u, v_weights_u
+        FROM picker_cache WHERE cache_key = 'titles:' || p_locale || ':u';
+
+        IF v_ids_u IS NOT NULL THEN
+            v_ids := COALESCE(v_ids, ARRAY[]::BIGINT[]) || v_ids_u;
+            v_weights := COALESCE(v_weights, ARRAY[]::INT[]) || v_weights_u;
+        END IF;
+    END IF;
 
     IF v_ids IS NULL THEN
         RAISE EXCEPTION 'fn_pick_title: no titles for locale=%, gender=%', p_locale, p_gender;
@@ -105,11 +118,8 @@ DECLARE
     v_weights INT[];
     v_picked_id BIGINT;
 BEGIN
-    SELECT array_agg(id ORDER BY id),
-        array_agg(freq_weight ORDER BY id)
-    INTO v_ids, v_weights
-    FROM eye_colors
-    WHERE locale = p_locale;
+    SELECT ids, weights INTO v_ids, v_weights
+    FROM picker_cache WHERE cache_key = 'eye_colors:' || p_locale;
 
     IF v_ids IS NULL THEN
         RAISE EXCEPTION 'fn_pick_eye_color: no colors for locale=%',
@@ -133,11 +143,8 @@ DECLARE
     v_weights INT[];
     v_picked_id BIGINT;
 BEGIN
-    SELECT array_agg(id ORDER BY id),
-        array_agg(freq_weight ORDER BY id)
-    INTO v_ids, v_weights
-    FROM hair_colors
-    WHERE locale = p_locale;
+    SELECT ids, weights INTO v_ids, v_weights
+    FROM picker_cache WHERE cache_key = 'hair_colors:' || p_locale;
 
     IF v_ids IS NULL THEN
         RAISE EXCEPTION 'fn_pick_hair_color: no colors for locale=%', p_locale;
@@ -160,11 +167,8 @@ DECLARE
     v_weights INT[];
     v_picked_id BIGINT;
 BEGIN
-    SELECT array_agg(id ORDER BY id),
-        array_agg(freq_weight ORDER BY id)
-    INTO v_ids, v_weights
-    FROM email_domains
-    WHERE locale = p_locale OR locale IS NULL;
+    SELECT ids, weights INTO v_ids, v_weights
+    FROM picker_cache WHERE cache_key = 'email_domains:' || p_locale;
 
     IF v_ids IS NULL THEN
         RAISE EXCEPTION 'fn_pick_email_domain: no email domains for locale=%', p_locale;
@@ -187,11 +191,8 @@ DECLARE
     v_weights INT[];
     v_picked_id BIGINT;
 BEGIN
-    SELECT array_agg(id ORDER BY id),
-        array_agg(freq_weight ORDER BY id)
-    INTO v_ids, v_weights
-    FROM street_names
-    WHERE locale = p_locale;
+    SELECT ids, weights INTO v_ids, v_weights
+    FROM picker_cache WHERE cache_key = 'street_names:' || p_locale;
 
     IF v_ids IS NULL THEN
         RAISE EXCEPTION 'fn_pick_street_name: no street names for locale=%',p_locale;
@@ -208,19 +209,16 @@ CREATE OR REPLACE FUNCTION fn_pick_street_type(
     p_idx INT,
     p_field TEXT,
     p_locale TEXT,
-    OUT str_type TEXT,
-    OUT format TEXT
+    OUT type_value TEXT,
+    OUT type_format TEXT
 )AS $$
 DECLARE
     v_ids BIGINT[];
     v_weights INT[];
     v_picked_id BIGINT;
 BEGIN
-    SELECT array_agg(id ORDER BY id),
-        array_agg(freq_weight ORDER BY id)
-    INTO v_ids, v_weights
-    FROM street_types
-    WHERE locale = p_locale;
+    SELECT ids, weights INTO v_ids, v_weights
+    FROM picker_cache WHERE cache_key = 'street_types:' || p_locale;
 
     IF v_ids IS NULL THEN
         RAISE EXCEPTION 'fn_pick_street_type: no street types for locale=%',p_locale;
@@ -228,7 +226,7 @@ BEGIN
 
     v_picked_id := fn_hash_weighted_pick_id(p_seed, p_batch, p_idx, p_field, v_ids, v_weights);
     SELECT s.value, s.format
-    INTO str_type, format
+    INTO type_value, type_format
     FROM street_types s
     WHERE s.id = v_picked_id;
 END;
@@ -246,11 +244,8 @@ DECLARE
     v_weights INT[];
     v_picked_id BIGINT;
 BEGIN
-    SELECT array_agg(id ORDER BY id),
-        array_agg(freq_weight ORDER BY id)
-    INTO v_ids, v_weights
-    FROM phone_formats
-    WHERE locale = p_locale;
+    SELECT ids, weights INTO v_ids, v_weights
+    FROM picker_cache WHERE cache_key = 'phone_formats:' || p_locale;
 
     IF v_ids IS NULL THEN
         RAISE EXCEPTION 'fn_pick_phone_format: no phone formats for locale=%', p_locale;

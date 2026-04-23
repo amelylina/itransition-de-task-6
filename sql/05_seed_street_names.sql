@@ -1,3 +1,7 @@
+BEGIN;
+
+TRUNCATE TABLE street_names RESTART IDENTITY;
+
 INSERT INTO street_names (locale, value, freq_weight) VALUES
     ('en_US', 'Main', 100), ('en_US', 'Oak', 80), ('en_US', 'Maple', 75),
     ('en_US', 'Pine', 70), ('en_US', 'Cedar', 60), ('en_US', 'Elm', 60),
@@ -71,3 +75,5 @@ INSERT INTO street_names (locale, value, freq_weight) VALUES
     ('de_DE', 'Parks', 25), ('de_DE', 'Blumen', 30), ('de_DE', 'Rosen', 30),
     ('de_DE', 'Fichten', 25), ('de_DE', 'Pappeln', 20), ('de_DE', 'Erlen', 20),
     ('de_DE', 'Flieder', 20), ('de_DE', 'Jasmin', 15), ('de_DE', 'Magnolien', 15);
+
+COMMIT;
